@@ -106,6 +106,9 @@ class HomepageSystem {
 		// Render page content based on type
 		const mainContent = document.getElementById("main-content");
 		mainContent.innerHTML = '<div class="loading">Loading content...</div>';
+		
+		// Add page-type class to main content
+		mainContent.className = `page-${page.type}`;
 
 		try {
 			if (page.type === "list") {
