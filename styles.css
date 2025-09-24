@@ -6,26 +6,60 @@
 }
 
 body {
-	font-family: Arial, sans-serif;
-	line-height: 1.6;
-	color: #333;
+	/* Font Variables */
+	--font-family-primary: Arial, sans-serif;
+	--font-family-code: "Courier New", monospace;
+	--line-height-base: 1.6;
+
+	/* Font Size Variables */
+	--font-size-xs: 0.875rem;
+	--font-size-sm: 1rem;
+	--font-size-base: 1.1rem;
+	--font-size-lg: 1.2rem;
+	--font-size-xl: 1.5rem;
+	--font-size-2xl: 2.5rem;
+
+	/* Color Variables */
+	--color-primary: #007bff;
+	--color-primary-hover: #0056b3;
+	--color-success: #28a745;
+	--color-success-hover: #1e7e34;
+	--color-danger: #dc3545;
+	--color-secondary: #6c757d;
+
+	--color-text-primary: #333;
+	--color-text-secondary: #666;
+	--color-text-white: #fff;
+
+	--color-bg-primary: #fff;
+	--color-bg-secondary: #f4f4f4;
+	--color-bg-tertiary: #f8f9fa;
+	--color-bg-light: #e9ecef;
+
+	--color-border-light: #ddd;
+	--color-border-medium: #e9ecef;
+
+	/* Apply base styles */
+	font-family: var(--font-family-primary);
+	line-height: var(--line-height-base);
+	color: var(--color-text-primary);
 }
 
 #hero-section {
-	background: #f4f4f4;
+	background: var(--color-bg-secondary);
 	padding: 2rem;
 	text-align: center;
 }
 
 #page-title {
-	font-size: 2.5rem;
+	font-size: var(--font-size-2xl);
 	margin-bottom: 0.5rem;
 }
 
 #page-subtitle {
-	font-size: 1.2rem;
+	font-size: var(--font-size-lg);
 	margin-bottom: 2rem;
-	color: #666;
+	color: var(--color-text-secondary);
 }
 
 #navigation-menu {
@@ -43,18 +77,18 @@ body {
 #navigation-menu a {
 	text-decoration: none;
 	padding: 0.5rem 1rem;
-	background: #007bff;
-	color: white;
+	background: var(--color-primary);
+	color: var(--color-text-white);
 	border-radius: 4px;
 	transition: background 0.3s;
 }
 
 #navigation-menu a:hover {
-	background: #0056b3;
+	background: var(--color-primary-hover);
 }
 
 #navigation-menu a.active {
-	background: #28a745;
+	background: var(--color-success);
 }
 
 #main-content {
@@ -69,15 +103,15 @@ body {
 }
 
 .list-section h3 {
-	font-size: 1.5rem;
+	font-size: var(--font-size-xl);
 	margin-bottom: 1rem;
-	color: #007bff;
+	color: var(--color-primary);
 }
 
 .nested-list-section h4 {
-	font-size: 1.2rem;
+	font-size: var(--font-size-lg);
 	margin: 1rem 0 0.5rem 0;
-	color: #666;
+	color: var(--color-text-secondary);
 }
 
 .list-content {
@@ -85,7 +119,7 @@ body {
 }
 
 .list-content a {
-	color: #007bff;
+	color: var(--color-primary);
 	text-decoration: none;
 	display: block;
 	padding: 0.25rem 0;
@@ -97,7 +131,7 @@ body {
 
 /* Term page styles */
 .table-of-contents {
-	background: #f8f9fa;
+	background: var(--color-bg-tertiary);
 	padding: 1.5rem;
 	border-radius: 4px;
 	margin-bottom: 2rem;
@@ -115,33 +149,33 @@ body {
 }
 
 .toc-list a {
-	color: #007bff;
+	color: var(--color-primary);
 	text-decoration: none;
 	padding: 0.25rem 0.5rem;
-	border: 1px solid #ddd;
+	border: 1px solid var(--color-border-light);
 	border-radius: 3px;
-	background: white;
+	background: var(--color-bg-primary);
 }
 
 .toc-list a:hover {
-	background: #e9ecef;
+	background: var(--color-bg-light);
 }
 
 .term-block {
-	border: 1px solid #ddd;
+	border: 1px solid var(--color-border-light);
 	margin-bottom: 2rem;
 	border-radius: 4px;
 	overflow: hidden;
 }
 
 .term-header {
-	background: #007bff;
-	color: white;
+	background: var(--color-primary);
+	color: var(--color-text-white);
 	padding: 1rem;
 }
 
 .term-title {
-	font-size: 1.5rem;
+	font-size: var(--font-size-xl);
 	margin: 0;
 }
 
@@ -150,7 +184,7 @@ body {
 }
 
 .term-definition {
-	font-size: 1.1rem;
+	font-size: var(--font-size-base);
 	margin-bottom: 1rem;
 }
 
@@ -160,11 +194,11 @@ body {
 
 .flag {
 	display: inline-block;
-	background: #6c757d;
-	color: white;
+	background: var(--color-secondary);
+	color: var(--color-text-white);
 	padding: 0.25rem 0.5rem;
 	border-radius: 3px;
-	font-size: 0.875rem;
+	font-size: var(--font-size-xs);
 	margin-right: 0.5rem;
 }
 
@@ -173,15 +207,15 @@ body {
 }
 
 .example {
-	border: 1px solid #e9ecef;
+	border: 1px solid var(--color-border-medium);
 	margin-bottom: 1rem;
 	border-radius: 4px;
 }
 
 .example-header {
-	background: #f8f9fa;
+	background: var(--color-bg-tertiary);
 	padding: 0.75rem;
-	border-bottom: 1px solid #e9ecef;
+	border-bottom: 1px solid var(--color-border-medium);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -192,40 +226,40 @@ body {
 }
 
 .copy-btn {
-	background: #28a745;
-	color: white;
+	background: var(--color-success);
+	color: var(--color-text-white);
 	border: none;
 	padding: 0.25rem 0.5rem;
 	border-radius: 3px;
 	cursor: pointer;
-	font-size: 0.875rem;
+	font-size: var(--font-size-xs);
 }
 
 .copy-btn:hover {
-	background: #1e7e34;
+	background: var(--color-success-hover);
 }
 
 .copy-btn.copied {
-	background: #6c757d;
+	background: var(--color-secondary);
 }
 
 .example-code {
-	background: #f8f9fa;
+	background: var(--color-bg-tertiary);
 	padding: 1rem;
-	font-family: "Courier New", monospace;
+	font-family: var(--font-family-code);
 	white-space: pre-wrap;
 	overflow-x: auto;
 }
 
 .loading {
 	text-align: center;
-	font-size: 1.2rem;
-	color: #666;
+	font-size: var(--font-size-lg);
+	color: var(--color-text-secondary);
 	padding: 2rem;
 }
 
 .error {
-	color: #dc3545;
+	color: var(--color-danger);
 	text-align: center;
 	padding: 2rem;
 }
