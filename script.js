@@ -72,7 +72,7 @@ class HomepageSystem {
 			const li = document.createElement("li");
 			const link = document.createElement("a");
 			link.href = "#";
-			link.textContent = page.title;
+			link.textContent = page.name;
 			link.dataset.pageId = page.id;
 
 			link.addEventListener("click", (e) => {
