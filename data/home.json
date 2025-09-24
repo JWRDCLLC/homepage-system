@@ -1,0 +1,58 @@
+{
+	"id": "home",
+	"title": "Josh Robbs",
+	"subtitle": "JWR Digital Consulting LLC",
+	"type": "list",
+	"data": [
+		{
+			"type": "list",
+			"title": "Quick Links",
+			"content": [
+				{
+					"text": "Documentation Portal",
+					"url": "https://docs.example.com"
+				},
+				{
+					"text": "GitHub Repository",
+					"url": "https://github.com/example/project"
+				},
+				{
+					"text": "Support Center",
+					"url": "https://support.example.com"
+				}
+			]
+		},
+		{
+			"type": "nested-list",
+			"title": "Development Resources",
+			"subtitles": [
+				{
+					"title": "Frontend Tools",
+					"content": [
+						{
+							"text": "React Documentation",
+							"url": "https://react.dev"
+						},
+						{
+							"text": "CSS Grid Guide",
+							"url": "https://css-tricks.com/snippets/css/complete-guide-grid/"
+						}
+					]
+				},
+				{
+					"title": "Backend Tools",
+					"content": [
+						{
+							"text": "Node.js Documentation",
+							"url": "https://nodejs.org/docs"
+						},
+						{
+							"text": "Express.js Guide",
+							"url": "https://expressjs.com"
+						}
+					]
+				}
+			]
+		}
+	]
+}
