@@ -212,7 +212,8 @@ class HomepageSystem {
 		if (term.flags && term.flags.length > 0) {
 			html += '<div class="term-flags">';
 			term.flags.forEach((flag) => {
-				html += `<span class="flag">${flag}</span>`;
+				const [flagName, flagDescription] = flag.split(': ');
+				html += `<span class="flag"><strong>${flagName}</strong>: ${flagDescription}</span>`;
 			});
 			html += "</div>";
 		}
