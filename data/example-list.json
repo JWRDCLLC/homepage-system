@@ -1,0 +1,155 @@
+{
+	"id": "dev-fun",
+	"name": "Fun Stuff",
+	"title": "Developer Fun Zone",
+	"subtitle": "Cool tools, games, and resources to brighten your coding day",
+	"type": "list",
+	"data": [
+		{
+			"type": "list",
+			"title": "🎮 Coding Games & Challenges",
+			"content": [
+				{
+					"text": "Flexbox Froggy - Learn CSS Flexbox by helping Froggy",
+					"url": "https://flexboxfroggy.com"
+				},
+				{
+					"text": "CSS Grid Garden - Master CSS Grid with carrots",
+					"url": "https://cssgridgarden.com"
+				},
+				{
+					"text": "Vim Adventures - Learn Vim while playing an RPG",
+					"url": "https://vim-adventures.com"
+				},
+				{
+					"text": "Elevator Saga - Program elevators with JavaScript",
+					"url": "https://play.elevatorsaga.com"
+				}
+			]
+		},
+		{
+			"type": "nested-list",
+			"title": "🛠️ Developer Tools That Don't Suck",
+			"subtitles": [
+				{
+					"title": "Browser Extensions",
+					"content": [
+						{
+							"text": "React DevTools - Debug React like a boss",
+							"url": "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
+						},
+						{
+							"text": "ColorZilla - Eyedropper and gradient generator",
+							"url": "https://www.colorzilla.com"
+						},
+						{
+							"text": "Wappalyzer - Identify website technologies",
+							"url": "https://www.wappalyzer.com"
+						}
+					]
+				},
+				{
+					"title": "Online Generators",
+					"content": [
+						{
+							"text": "Haikei - Generate stunning SVG design assets",
+							"url": "https://haikei.app"
+						},
+						{
+							"text": "CSS Gradient - Beautiful gradient generator",
+							"url": "https://cssgradient.io"
+						},
+						{
+							"text": "Lorem Picsum - Random placeholder images",
+							"url": "https://picsum.photos"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "list",
+			"title": "🎨 Design Inspiration",
+			"content": [
+				{
+					"text": "Dribbble - Creative design shots",
+					"url": "https://dribbble.com"
+				},
+				{
+					"text": "UI Movement - UI design patterns and interactions",
+					"url": "https://uimovement.com"
+				},
+				{
+					"text": "Collect UI - Daily design inspiration",
+					"url": "https://collectui.com"
+				},
+				{
+					"text": "Page Flows - User flow design patterns",
+					"url": "https://pageflows.com"
+				}
+			]
+		},
+		{
+			"type": "nested-list",
+			"title": "🚀 Productivity Boosters",
+			"subtitles": [
+				{
+					"title": "Focus & Time Management",
+					"content": [
+						{
+							"text": "Pomodone - Pomodoro technique timer",
+							"url": "https://pomodoneapp.com"
+						},
+						{
+							"text": "Forest - Stay focused, plant trees",
+							"url": "https://www.forestapp.cc"
+						},
+						{
+							"text": "Brain.fm - Focus music backed by science",
+							"url": "https://brain.fm"
+						}
+					]
+				},
+				{
+					"title": "Workflow Tools",
+					"content": [
+						{
+							"text": "Raycast - Supercharged launcher for macOS",
+							"url": "https://www.raycast.com"
+						},
+						{
+							"text": "PowerToys - Windows system utilities",
+							"url": "https://github.com/microsoft/PowerToys"
+						},
+						{
+							"text": "Excalidraw - Hand-drawn style diagrams",
+							"url": "https://excalidraw.com"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "list",
+			"title": "🎵 Coding Playlists & Ambient",
+			"content": [
+				{
+					"text": "lofi.co - Minimal lofi hip hop radio",
+					"url": "https://lofi.co"
+				},
+				{
+					"text": "Noisli - Background noise generator",
+					"url": "https://www.noisli.com"
+				},
+				{
+					"text": "A Soft Murmur - Ambient sound mixer",
+					"url": "https://asoftmurmur.com"
+				},
+				{
+					"text": "mynoise.net - High-quality background noises",
+					"url": "https://mynoise.net"
+				}
+			]
+		}
+	]
+}
