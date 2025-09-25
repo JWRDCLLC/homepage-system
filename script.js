@@ -193,7 +193,7 @@ class HomepageSystem {
 
 		// Generate term blocks
 		sortedTerms.forEach((term) => {
-			html += this.renderTerm(term);
+			html += this.renderTerm(term, page);
 		});
 
 		mainContent.innerHTML = html;
@@ -204,7 +204,7 @@ class HomepageSystem {
 		}
 	}
 
-	renderTerm(term) {
+	renderTerm(term, page) {
 		const id = this.generateTermId(term.term);
 		let html = `<div class="term-block" id="${id}">
             <div class="term-header">
