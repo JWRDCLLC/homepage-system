@@ -91,6 +91,7 @@ body h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
   margin: 0;
   padding: 2rem;
   text-align: center;
@@ -115,6 +116,7 @@ body h4 {
 }
 
 #navigation-menu {
+  margin-top: 2rem;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -142,7 +144,7 @@ body h4 {
 .page-list {
   display: grid;
   padding: 4rem 2rem;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .page-list .list-section {
@@ -165,7 +167,8 @@ body h4 {
   color: var(--color-primary);
   text-decoration: none;
   display: block;
-  padding: 0.25rem 0;
+  padding: 0;
+  margin: 0.5em 0;
   line-height: 1.1;
 }
 .page-list .list-content a:hover {
@@ -174,67 +177,71 @@ body h4 {
 
 .page-terms .table-of-contents {
   background: var(--color-bg-tertiary);
+  color: var(--color-primary);
   padding: 1.5rem;
   border-radius: 4px;
   margin-bottom: 2rem;
 }
-
 .page-terms .table-of-contents h2 {
   margin-bottom: 1rem;
 }
-
 .page-terms .toc-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
 }
-
 .page-terms .toc-list a {
+  background-color: var(--color-primary);
+  padding: 0.25em 0.5em;
+  text-decoration: none;
   color: var(--color-primary);
   text-decoration: none;
   padding: 0.25rem 0.5rem;
   border: 1px solid var(--color-border-light);
   border-radius: 3px;
-  background: var(--color-bg-primary);
+}
+.page-terms .toc-list a:hover {
+  color: var(--color-primary);
+  background-color: var(--color-border-light);
 }
 
 .page-terms .toc-list a:hover {
   background: var(--color-bg-light);
 }
 
-.page-terms .term-block {
+.term-block {
   border: 1px solid var(--color-border-light);
   margin-bottom: 2rem;
   border-radius: 4px;
   overflow: hidden;
 }
 
-.page-terms .term-header {
+.term-header {
   background: var(--color-primary);
   color: var(--color-text-white);
   padding: 1rem;
 }
 
-.page-terms .term-title {
+.term-title {
   font-size: var(--font-size-xl);
   margin: 0;
 }
 
-.page-terms .term-content {
+.term-content {
   padding: 1rem;
 }
 
-.page-terms .term-definition {
+.term-definition {
   font-size: var(--font-size-base);
   margin-bottom: 1rem;
 }
 
-.page-terms .term-flags {
+.term-flags {
   margin-bottom: 1rem;
 }
 
-.page-terms .flag {
+.flag {
   display: inline-block;
   background: var(--color-secondary);
   color: var(--color-text-white);
@@ -243,18 +250,23 @@ body h4 {
   font-size: var(--font-size-xs);
   margin-right: 0.5rem;
 }
-
-.page-terms .term-examples {
-  margin-top: 1rem;
+.flag strong {
+  font-weight: 700;
 }
 
-.page-terms .example {
-  border: 1px solid var(--color-border-medium);
+.term-examples {
+  margin-top: 1rem;
+}
+.term-examples .example {
+  border: 2px solid var(--color-border-light);
   margin-bottom: 1rem;
   border-radius: 4px;
 }
+.term-examples .example .example-header {
+  background-color: var(--color-primary);
+}
 
-.page-terms .example-header {
+.example-header {
   background: var(--color-bg-tertiary);
   padding: 0.75rem;
   border-bottom: 1px solid var(--color-border-medium);
@@ -263,11 +275,11 @@ body h4 {
   align-items: center;
 }
 
-.page-terms .example-text {
+.example-text {
   font-weight: bold;
 }
 
-.page-terms .copy-btn {
+.copy-btn {
   background: var(--color-success);
   color: var(--color-text-white);
   border: none;
@@ -276,16 +288,14 @@ body h4 {
   cursor: pointer;
   font-size: var(--font-size-xs);
 }
-
-.page-terms .copy-btn:hover {
+.copy-btn:hover {
   background: var(--color-success-hover);
 }
-
-.page-terms .copy-btn.copied {
+.copy-btn.copied {
   background: var(--color-secondary);
 }
 
-.page-terms .example-code {
+.example-code {
   background: var(--color-bg-tertiary);
   padding: 1rem;
   font-family: var(--font-family-code);
@@ -304,28 +314,4 @@ body h4 {
   color: var(--color-danger);
   text-align: center;
   padding: 2rem;
-}
-
-#main-content.page-terms .table-of-contents {
-  color: var(--color-primary);
-}
-#main-content.page-terms .toc-list a {
-  background-color: var(--color-primary);
-  border: 1px solid var(--color-primary);
-  padding: 0.25em 0.5em;
-  text-decoration: none;
-  color: var(--color-border-light);
-}
-#main-content.page-terms .toc-list a:hover {
-  color: var(--color-primary);
-  background-color: var(--color-border-light);
-}
-#main-content.page-terms .flag strong {
-  font-weight: 700;
-}
-#main-content.page-terms .term-examples .example {
-  border: 2px solid var(--color-border-light);
-}
-#main-content.page-terms .term-examples .example .example-header {
-  background-color: var(--color-primary);
 }/*# sourceMappingURL=styles.css.map */
