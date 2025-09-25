@@ -106,7 +106,7 @@ class HomepageSystem {
 		// Render page content based on type
 		const mainContent = document.getElementById("main-content");
 		mainContent.innerHTML = '<div class="loading">Loading content...</div>';
-		
+
 		// Add page-type class to main content
 		mainContent.className = `page-${page.type}`;
 
@@ -197,9 +197,9 @@ class HomepageSystem {
 		});
 
 		mainContent.innerHTML = html;
-		
+
 		// Trigger Prism.js syntax highlighting
-		if (typeof Prism !== 'undefined') {
+		if (typeof Prism !== "undefined") {
 			Prism.highlightAll();
 		}
 	}
@@ -217,7 +217,7 @@ class HomepageSystem {
 		if (term.flags && term.flags.length > 0) {
 			html += '<div class="term-flags">';
 			term.flags.forEach((flag) => {
-				const [flagName, flagDescription] = flag.split(': ');
+				const [flagName, flagDescription] = flag.split(": ");
 				html += `<span class="flag"><strong>${flagName}</strong>: ${flagDescription}</span>`;
 			});
 			html += "</div>";
@@ -235,7 +235,9 @@ class HomepageSystem {
                             Copy Code
                         </button>
                     </div>
-                    <pre><code class="language-javascript" id="${exampleId}">${this.escapeHtml(
+                    <pre><code class="language-${
+											page.language || "javascript"
+										}" id="${exampleId}">${this.escapeHtml(
 					example.code
 				)}</code></pre>
                 </div>`;

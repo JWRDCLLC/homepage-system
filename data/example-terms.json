@@ -4,6 +4,7 @@
 	"title": "Git Command Reference",
 	"subtitle": "Essential Git commands for version control mastery",
 	"type": "terms",
+	"language": "bash",
 	"data": [
 		{
 			"term": "git clone",
