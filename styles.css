@@ -46,7 +46,133 @@ body {
   padding: 2rem;
 }
 
-/* Term page styles */
+body {
+  background-color: var(--color-primary);
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "Raleway", sans-serif;
+}
+body h1,
+body h2,
+body h3,
+body h4 {
+  font-family: var(--font-family-header);
+  line-height: 1;
+  padding: 0;
+  font-weight: bold;
+}
+
+#main-content {
+  min-height: 100vh;
+}
+#main-content h3,
+#main-content h4,
+#main-content a {
+  color: var(--color-border-light);
+}
+#main-content h3 {
+  font-size: 2.618rem;
+  line-height: 1.1;
+  text-shadow: 1px 1px 0px #000;
+  letter-spacing: 0.1em;
+}
+#main-content h4 {
+  font-size: 1.618rem;
+  margin: 0;
+  padding: 0.5em 0 0.25em;
+  line-height: 1.1;
+  font-weight: 400;
+  font-style: italic;
+  text-shadow: 1px 1px 0px #000;
+}
+
+#hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+#hero-section a {
+  text-decoration: none;
+}
+#hero-section h1 {
+  color: var(--color-border-light);
+  text-transform: uppercase;
+  font-size: 11.089rem;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000, 4px 4px 0px #000, 5px 5px 0px #000, 5px 5px 10px #000;
+  text-decoration: none;
+}
+#hero-section #page-subtitle {
+  color: var(--color-border-light);
+  font-size: 3.57rem;
+  text-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000;
+  letter-spacing: 2px;
+}
+
+#navigation-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#navigation-menu li {
+  display: inline;
+}
+#navigation-menu a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary);
+  color: var(--color-text-white);
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+#navigation-menu a:hover {
+  background: var(--color-primary-hover);
+}
+#navigation-menu a.active {
+  background: var(--color-success);
+}
+
+.page-list {
+  display: grid;
+  padding: 4rem 2rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.page-list .list-section {
+  margin-bottom: 2rem;
+}
+.page-list .list-section h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+.page-list .nested-list-section h4 {
+  font-size: var(--font-size-lg);
+  margin: 1rem 0 0.5rem 0;
+  color: var(--color-text-secondary);
+}
+.page-list .list-content {
+  margin-bottom: 1rem;
+}
+.page-list .list-content a {
+  color: var(--color-primary);
+  text-decoration: none;
+  display: block;
+  padding: 0.25rem 0;
+  line-height: 1.1;
+}
+.page-list .list-content a:hover {
+  text-decoration: underline;
+  color: green;
+}
+
 .page-terms .table-of-contents {
   background: var(--color-bg-tertiary);
   padding: 1.5rem;
@@ -181,88 +307,6 @@ body {
   padding: 2rem;
 }
 
-body {
-  background-color: var(--color-primary);
-  font-size: 18px;
-  line-height: 1.5;
-  font-family: "Raleway", sans-serif;
-}
-body h1,
-body h2,
-body h3,
-body h4 {
-  font-family: var(--font-family-header);
-  line-height: 1;
-  padding: 0;
-  font-weight: bold;
-}
-
-#hero-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  padding: 2rem;
-  text-align: center;
-}
-#hero-section a {
-  text-decoration: none;
-}
-#hero-section h1 {
-  color: var(--color-border-light);
-  text-transform: uppercase;
-  font-size: 11.089rem;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  text-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000, 4px 4px 0px #000, 5px 5px 0px #000, 5px 5px 10px #000;
-  text-decoration: none;
-}
-#hero-section #page-subtitle {
-  color: var(--color-border-light);
-  font-size: 3.57rem;
-  text-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000;
-  letter-spacing: 2px;
-}
-
-#main-content {
-  min-height: 100vh;
-}
-#main-content h3,
-#main-content h4,
-#main-content a {
-  color: var(--color-border-light);
-}
-#main-content h3 {
-  font-size: 2.618rem;
-  line-height: 1.1;
-  text-shadow: 1px 1px 0px #000;
-  letter-spacing: 0.1em;
-}
-#main-content h4 {
-  font-size: 1.618rem;
-  margin: 0;
-  padding: 0.5em 0 0.25em;
-  line-height: 1.1;
-  font-weight: 400;
-  font-style: italic;
-  text-shadow: 1px 1px 0px #000;
-}
-
-#main-content.page-list {
-  display: grid;
-  padding: 4rem 2rem;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-#main-content.page-list .list-content {
-  display: list;
-  margin: 1rem;
-}
-#main-content.page-list .list-content a {
-  line-height: 1.1;
-}
-
 #main-content.page-terms .table-of-contents {
   color: var(--color-primary);
 }
@@ -285,81 +329,4 @@ body h4 {
 }
 #main-content.page-terms .term-examples .example .example-header {
   background-color: var(--color-primary);
-}
-#hero-section {
-  background: var(--color-bg-secondary);
-  padding: 2rem;
-  text-align: center;
-}
-
-#page-title {
-  font-size: var(--font-size-2xl);
-  margin-bottom: 0.5rem;
-}
-
-#page-subtitle {
-  font-size: var(--font-size-lg);
-  margin-bottom: 2rem;
-  color: var(--color-text-secondary);
-}
-
-#navigation-menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-#navigation-menu li {
-  display: inline;
-}
-
-#navigation-menu a {
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  background: var(--color-primary);
-  color: var(--color-text-white);
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-#navigation-menu a:hover {
-  background: var(--color-primary-hover);
-}
-
-#navigation-menu a.active {
-  background: var(--color-success);
-}
-
-/* List page styles */
-.page-list .list-section {
-  margin-bottom: 2rem;
-}
-
-.page-list .list-section h3 {
-  font-size: var(--font-size-xl);
-  margin-bottom: 1rem;
-  color: var(--color-primary);
-}
-
-.page-list .nested-list-section h4 {
-  font-size: var(--font-size-lg);
-  margin: 1rem 0 0.5rem 0;
-  color: var(--color-text-secondary);
-}
-
-.page-list .list-content {
-  margin-bottom: 1rem;
-}
-
-.page-list .list-content a {
-  color: var(--color-primary);
-  text-decoration: none;
-  display: block;
-  padding: 0.25rem 0;
-}
-
-.page-list .list-content a:hover {
-  text-decoration: underline;
 }/*# sourceMappingURL=styles.css.map */
