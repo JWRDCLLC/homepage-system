@@ -7,6 +7,124 @@
 	"data": [
 		{
 			"type": "list",
+			"title": "Biz Tools",
+			"content": [
+				{
+					"text": "Google Meet",
+					"url": "https://meet.google.com/"
+				},
+				{
+					"text": "Harvest",
+					"url": "https://jrobbs.harvestapp.com/time"
+				},
+				{
+					"text": "ChatGPT",
+					"url": "https://chatgpt.com/"
+				},
+				{
+					"text": "Sales Flare",
+					"url": "https://app.salesflare.com/#/tasks/today"
+				},
+				{
+					"text": "Better Proposals",
+					"url": "https://betterproposals.io/2/dashboard/"
+				},
+				{
+					"text": "Book Like a Boss",
+					"url": "https://bookme.name/account/dashboard"
+				},
+				{
+					"text": "Wise Stamp",
+					"url": "https://webapp.wisestamp.com/"
+				},
+				{
+					"text": "Zero Trust",
+					"url": "https://one.dash.cloudflare.com/"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"title": "Dev Tools",
+			"content": [
+				{
+					"text": "Markdown to HTML",
+					"url": "https://markdowntohtml.com/"
+				},
+				{
+					"text": "PHP sandbox",
+					"url": "http://phptester.net/"
+				},
+				{
+					"text": "Online PHP",
+					"url": "http://onlinephp.io/"
+				},
+				{
+					"text": "REGEX 101",
+					"url": "https://regex101.com/"
+				},
+				{
+					"text": "SCSS to CSS converter",
+					"url": "https://jsonformatter.org/scss-to-css"
+				},
+				{
+					"text": "Another SCSS to CSS converter",
+					"url": "https://www.cssportal.com/scss-to-css/"
+				},
+				{
+					"text": "Image to text",
+					"url": "https://www.imagetotext.info/"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"title": "Testers",
+			"content": [
+				{
+					"text": "OWASP Cheatsheets",
+					"url": "https://cheatsheetseries.owasp.org/index.html"
+				},
+				{
+					"text": "Design Fulltime (JR sign-in)",
+					"url": "https://designfulltime.com"
+				},
+				{
+					"text": "Liftoff",
+					"url": "https://liftoffcourse.com/dashboard"
+				},
+				{
+					"text": "PHP the Right Way",
+					"url": "https://phptherightway.com/"
+				},
+				{
+					"text": "PHP Design patterns",
+					"url": "https://refactoring.guru/design-patterns/php"
+				},
+				{
+					"text": "Owner Media",
+					"url": "https://rainmaker.owner.media/myowner/"
+				},
+				{
+					"text": "Markdown",
+					"url": "https://www.markdownguide.org/cheat-sheet/"
+				},
+				{
+					"text": "HTML",
+					"url": "https://htmlcheatsheet.com/"
+				},
+				{
+					"text": "CSS",
+					"url": "https://htmlcheatsheet.com/css/"
+				},
+				{
+					"text": "SCSS",
+					"url": "https://devhints.io/sass"
+				}
+			]
+		},
+		{
+			"type": "list",
 			"title": "Quick Links",
 			"content": [
 				{
