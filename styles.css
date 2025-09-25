@@ -40,88 +40,10 @@ body {
   color: var(--color-text-primary);
 }
 
-#hero-section {
-  background: var(--color-bg-secondary);
-  padding: 2rem;
-  text-align: center;
-}
-
-#page-title {
-  font-size: var(--font-size-2xl);
-  margin-bottom: 0.5rem;
-}
-
-#page-subtitle {
-  font-size: var(--font-size-lg);
-  margin-bottom: 2rem;
-  color: var(--color-text-secondary);
-}
-
-#navigation-menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-#navigation-menu li {
-  display: inline;
-}
-
-#navigation-menu a {
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  background: var(--color-primary);
-  color: var(--color-text-white);
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-#navigation-menu a:hover {
-  background: var(--color-primary-hover);
-}
-
-#navigation-menu a.active {
-  background: var(--color-success);
-}
-
 #main-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-}
-
-/* List page styles */
-.page-list .list-section {
-  margin-bottom: 2rem;
-}
-
-.page-list .list-section h3 {
-  font-size: var(--font-size-xl);
-  margin-bottom: 1rem;
-  color: var(--color-primary);
-}
-
-.page-list .nested-list-section h4 {
-  font-size: var(--font-size-lg);
-  margin: 1rem 0 0.5rem 0;
-  color: var(--color-text-secondary);
-}
-
-.page-list .list-content {
-  margin-bottom: 1rem;
-}
-
-.page-list .list-content a {
-  color: var(--color-primary);
-  text-decoration: none;
-  display: block;
-  padding: 0.25rem 0;
-}
-
-.page-list .list-content a:hover {
-  text-decoration: underline;
 }
 
 /* Term page styles */
@@ -363,4 +285,81 @@ body h4 {
 }
 #main-content.page-terms .term-examples .example .example-header {
   background-color: var(--color-primary);
+}
+#hero-section {
+  background: var(--color-bg-secondary);
+  padding: 2rem;
+  text-align: center;
+}
+
+#page-title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: 0.5rem;
+}
+
+#page-subtitle {
+  font-size: var(--font-size-lg);
+  margin-bottom: 2rem;
+  color: var(--color-text-secondary);
+}
+
+#navigation-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#navigation-menu li {
+  display: inline;
+}
+
+#navigation-menu a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary);
+  color: var(--color-text-white);
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+#navigation-menu a:hover {
+  background: var(--color-primary-hover);
+}
+
+#navigation-menu a.active {
+  background: var(--color-success);
+}
+
+/* List page styles */
+.page-list .list-section {
+  margin-bottom: 2rem;
+}
+
+.page-list .list-section h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.page-list .nested-list-section h4 {
+  font-size: var(--font-size-lg);
+  margin: 1rem 0 0.5rem 0;
+  color: var(--color-text-secondary);
+}
+
+.page-list .list-content {
+  margin-bottom: 1rem;
+}
+
+.page-list .list-content a {
+  color: var(--color-primary);
+  text-decoration: none;
+  display: block;
+  padding: 0.25rem 0;
+}
+
+.page-list .list-content a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=styles.css.map */
