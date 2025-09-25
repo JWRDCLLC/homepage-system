@@ -197,6 +197,11 @@ class HomepageSystem {
 		});
 
 		mainContent.innerHTML = html;
+		
+		// Trigger Prism.js syntax highlighting
+		if (typeof Prism !== 'undefined') {
+			Prism.highlightAll();
+		}
 	}
 
 	renderTerm(term) {
@@ -230,9 +235,9 @@ class HomepageSystem {
                             Copy Code
                         </button>
                     </div>
-                    <div class="example-code" id="${exampleId}">${this.escapeHtml(
+                    <pre><code class="language-javascript" id="${exampleId}">${this.escapeHtml(
 					example.code
-				)}</div>
+				)}</code></pre>
                 </div>`;
 			});
 			html += "</div>";
