@@ -1,0 +1,124 @@
+{
+	"id": "git-commands",
+	"name": "Git Ref",
+	"title": "Git Command Reference",
+	"subtitle": "Essential Git commands for version control mastery",
+	"type": "terms",
+	"language": "bash",
+	"data": [
+		{
+			"term": "git clone",
+			"definition": "Creates a local copy of a remote repository, downloading all files, history, and branches to your machine.",
+			"flags": [
+				"--depth: shallow clone with limited history",
+				"--branch: clone specific branch",
+				"--single-branch: clone only one branch"
+			],
+			"examples": [
+				{
+					"text": "Clone a repository from GitHub",
+					"code": "git clone https://github.com/user/repo.git\ncd repo"
+				},
+				{
+					"text": "Shallow clone for faster downloads",
+					"code": "git clone --depth 1 https://github.com/user/repo.git"
+				}
+			]
+		},
+		{
+			"term": "git commit",
+			"definition": "Records changes to the repository with a descriptive message, creating a snapshot of your current work.",
+			"flags": [
+				"-m: commit message inline",
+				"-a: stage all modified files",
+				"--amend: modify last commit"
+			],
+			"examples": [
+				{
+					"text": "Basic commit with message",
+					"code": "git add .\ngit commit -m \"Add new feature for user authentication\""
+				},
+				{
+					"text": "Stage and commit in one command",
+					"code": "git commit -am \"Fix typo in README\""
+				}
+			]
+		},
+		{
+			"term": "git branch",
+			"definition": "Creates, lists, or deletes branches. Branches allow you to work on different features or versions simultaneously.",
+			"flags": [
+				"-b: create and switch to new branch",
+				"-d: delete branch safely",
+				"-D: force delete branch"
+			],
+			"examples": [
+				{
+					"text": "Create and switch to new feature branch",
+					"code": "git checkout -b feature/user-login\n# or with newer syntax\ngit switch -c feature/user-login"
+				},
+				{
+					"text": "List all branches",
+					"code": "git branch -a  # local and remote\ngit branch -r  # remote only"
+				}
+			]
+		},
+		{
+			"term": "git merge",
+			"definition": "Combines changes from different branches, integrating the history and content of both branches.",
+			"flags": [
+				"--no-ff: create merge commit always",
+				"--squash: combine commits into one",
+				"--abort: cancel merge in progress"
+			],
+			"examples": [
+				{
+					"text": "Merge feature branch into main",
+					"code": "git checkout main\ngit merge feature/user-login\ngit branch -d feature/user-login"
+				},
+				{
+					"text": "Handle merge conflicts",
+					"code": "git merge feature/conflicting-branch\n# Edit conflicted files\ngit add .\ngit commit"
+				}
+			]
+		},
+		{
+			"term": "git rebase",
+			"definition": "Rewrites commit history by moving commits from one branch to another, creating a linear history.",
+			"flags": [
+				"-i: interactive rebase mode",
+				"--onto: rebase onto different branch",
+				"--continue: continue after resolving conflicts"
+			],
+			"examples": [
+				{
+					"text": "Rebase feature branch onto latest main",
+					"code": "git checkout feature/my-feature\ngit rebase main\n# Resolve conflicts if any\ngit add .\ngit rebase --continue"
+				},
+				{
+					"text": "Interactive rebase to squash commits",
+					"code": "git rebase -i HEAD~3\n# In editor, change 'pick' to 'squash' for commits to combine"
+				}
+			]
+		},
+		{
+			"term": "git stash",
+			"definition": "Temporarily saves uncommitted changes, allowing you to switch branches or pull updates without losing work.",
+			"flags": [
+				"push: save current changes",
+				"pop: apply and remove latest stash",
+				"list: show all stashes"
+			],
+			"examples": [
+				{
+					"text": "Stash work in progress",
+					"code": "git stash push -m \"WIP: working on user validation\"\ngit checkout main\n# Do other work\ngit checkout feature/validation\ngit stash pop"
+				},
+				{
+					"text": "Stash specific files only",
+					"code": "git stash push -m \"Partial work\" src/components/Login.js"
+				}
+			]
+		}
+	]
+}

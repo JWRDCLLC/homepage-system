@@ -1,0 +1,97 @@
+/* Basic reset and layout - you can customize this styling */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	/* Font Variables */
+	--font-family-primary: Arial, sans-serif;
+	--font-family-header: "Bison regular", sans-serif;
+	--font-family-code: "fira code", "Courier New", monospace;
+	--line-height-base: 1.6;
+
+	/* Font Size Variables */
+	--font-size-xs: 0.875rem;
+	--font-size-sm: 1rem;
+	--font-size-base: 1.1rem;
+	--font-size-lg: 1.2rem;
+	--font-size-xl: 1.5rem;
+	--font-size-2xl: 2.5rem;
+
+	/* Color Variables */
+	--color-primary: #002244;
+	--color-primary-hover: #0056b3;
+	--color-success: #28a745;
+	--color-success-hover: #1e7e34;
+	--color-danger: #dc3545;
+	--color-secondary: #6c757d;
+
+	--color-text-primary: #fff;
+	--color-text-secondary: #fff;
+	--color-text-white: #fff;
+
+	--color-bg-primary: #002244;
+	--color-bg-secondary: #002244;
+	--color-bg-tertiary: #f8f9fa;
+	--color-bg-light: #e9ecef;
+
+	--color-border-light: #ddd;
+	--color-border-medium: #e9ecef;
+
+	/* Apply base styles */
+	font-family: var(--font-family-primary);
+	line-height: var(--line-height-base);
+	color: var(--color-text-primary);
+}
+
+#main-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+body {
+	background-color: var(--color-primary);
+
+	font-size: 18px;
+	line-height: 1.5;
+	font-family: "Raleway", sans-serif;
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: var(--font-family-header);
+		line-height: 1;
+		padding: 0;
+		font-weight: bold;
+	}
+}
+
+#main-content {
+	min-height: 100vh;
+
+	h3,
+	h4,
+	a {
+		color: var(--color-border-light);
+	}
+	h3 {
+		font-size: 2.618rem;
+		line-height: 1.1;
+		text-shadow: 1px 1px 0px #000;
+		letter-spacing: 0.1em;
+	}
+
+	h4 {
+		font-size: 1.618rem;
+		margin: 0;
+		padding: 0.5em 0 0.25em;
+		line-height: 1.1;
+		font-weight: 400;
+		font-style: italic;
+		text-shadow: 1px 1px 0px #000;
+	}
+}

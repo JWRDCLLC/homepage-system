@@ -1,0 +1,40 @@
+.page-list {
+	display: grid;
+	padding: 4rem 2rem;
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+	.list-section {
+		margin-bottom: 2rem;
+		h3 {
+			font-size: var(--font-size-xl);
+			margin-bottom: 1rem;
+			color: var(--color-primary);
+		}
+	}
+
+	.nested-list-section {
+		h4 {
+			font-size: var(--font-size-lg);
+			margin: 1rem 0 0.5rem 0;
+			color: var(--color-text-secondary);
+		}
+	}
+
+	.list-content {
+		margin-bottom: 1rem;
+
+		a {
+			color: var(--color-primary);
+			text-decoration: none;
+			display: block;
+			padding: 0;
+			margin: 0.5em 0;
+			line-height: 1.1;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
