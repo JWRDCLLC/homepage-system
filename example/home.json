@@ -1,8 +1,8 @@
 {
 	"id": "home",
 	"name": "Home",
-	"title": "Josh Robbs",
-	"subtitle": "JWR Digital Consulting LLC",
+	"title": "Example Home Page",
+	"subtitle": "from JWR Digital Consulting LLC",
 	"type": "list",
 	"data": [
 		{
