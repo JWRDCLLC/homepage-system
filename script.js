@@ -18,19 +18,33 @@ class HomepageSystem {
 	}
 
 	async loadAllPages() {
-		try {
-			// Get list of JSON files in the data directory
-			const response = await fetch("./data/");
-			const text = await response.text();
+		let dataDirectory = "./data/";
+		let useExampleFallback = false;
 
-			// Parse directory listing (this is a simple approach, you might need to adjust based on server)
+		try {
+			// Check if data directory has actual JSON files (not just .gitkeep)
+			const dataResponse = await fetch(dataDirectory);
+			const dataText = await dataResponse.text();
+			const dataFileList = this.parseDirectoryListing(dataText);
+			const jsonFiles = dataFileList.filter((file) => file.endsWith(".json"));
+
+			// If no JSON files in data directory, use example directory
+			if (jsonFiles.length === 0) {
+				dataDirectory = "./example/";
+				useExampleFallback = true;
+				console.log("Data directory is empty, using example directory");
+			}
+
+			// Get list of JSON files from the chosen directory
+			const response = await fetch(dataDirectory);
+			const text = await response.text();
 			const fileList = this.parseDirectoryListing(text);
 
 			// Load each JSON file
 			for (const filename of fileList) {
 				if (filename.endsWith(".json")) {
 					try {
-						const pageResponse = await fetch(`./data/${filename}`);
+						const pageResponse = await fetch(`${dataDirectory}${filename}`);
 						const pageData = await pageResponse.json();
 						this.pages[pageData.id] = pageData;
 					} catch (error) {
@@ -39,17 +53,31 @@ class HomepageSystem {
 				}
 			}
 		} catch (error) {
-			// Fallback: try to load known files (you can expand this list)
-			const knownFiles = ["home.json", "resources.json", "glossary.json"];
-			for (const filename of knownFiles) {
-				try {
-					const pageResponse = await fetch(`./data/${filename}`);
-					if (pageResponse.ok) {
-						const pageData = await pageResponse.json();
-						this.pages[pageData.id] = pageData;
+			console.error("Failed to load pages from directory listing:", error);
+
+			// Fallback: try to load known files from both directories
+			const directories = useExampleFallback
+				? ["./example/"]
+				: ["./data/", "./example/"];
+			const knownFiles = [
+				"home.json",
+				"example-list.json",
+				"example-terms.json",
+				"resources.json",
+				"glossary.json",
+			];
+
+			for (const directory of directories) {
+				for (const filename of knownFiles) {
+					try {
+						const pageResponse = await fetch(`${directory}${filename}`);
+						if (pageResponse.ok) {
+							const pageData = await pageResponse.json();
+							this.pages[pageData.id] = pageData;
+						}
+					} catch (error) {
+						// Silently continue - file might not exist in this directory
 					}
-				} catch (error) {
-					console.warn(`Failed to load ${filename}:`, error);
 				}
 			}
 		}
