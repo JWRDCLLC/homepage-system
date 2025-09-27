@@ -18,78 +18,51 @@ class HomepageSystem {
 	}
 
 	async loadAllPages() {
-		let dataDirectory = "./data/";
-		let useExampleFallback = false;
+		// Use PHP-generated configuration if available, otherwise fallback to static list
+		let directory, availableFiles;
 
-		try {
-			// Check if data directory has actual JSON files (not just .gitkeep)
-			const dataResponse = await fetch(dataDirectory);
-			const dataText = await dataResponse.text();
-			const dataFileList = this.parseDirectoryListing(dataText);
-			const jsonFiles = dataFileList.filter((file) => file.endsWith(".json"));
+		if (window.homepageConfig) {
+			// PHP generated the configuration for us
+			directory = window.homepageConfig.directory;
+			availableFiles = window.homepageConfig.availableFiles;
+			console.log(`Using PHP-detected directory: ${directory}`);
+			console.log(`Available files from PHP:`, availableFiles);
+		} else {
+			// Fallback for when PHP is not available (local dev with HTML)
+			console.log("No PHP configuration found, using fallback");
+			directory = "example";
+			availableFiles = ["home.json", "example-list.json", "example-terms.json"];
+		}
 
-			// If no JSON files in data directory, use example directory
-			if (jsonFiles.length === 0) {
-				dataDirectory = "./example/";
-				useExampleFallback = true;
-				console.log("Data directory is empty, using example directory");
-			}
-
-			// Get list of JSON files from the chosen directory
-			const response = await fetch(dataDirectory);
-			const text = await response.text();
-			const fileList = this.parseDirectoryListing(text);
-
-			// Load each JSON file
-			for (const filename of fileList) {
-				if (filename.endsWith(".json")) {
-					try {
-						const pageResponse = await fetch(`${dataDirectory}${filename}`);
-						const pageData = await pageResponse.json();
-						this.pages[pageData.id] = pageData;
-					} catch (error) {
-						console.warn(`Failed to load ${filename}:`, error);
-					}
+		// Load each available file from the determined directory
+		for (const filename of availableFiles) {
+			try {
+				const response = await fetch(`./${directory}/${filename}`);
+				if (response.ok) {
+					const pageData = await response.json();
+					this.pages[pageData.id] = pageData;
+					console.log(`✓ Loaded ${filename} from /${directory}/`);
+				} else {
+					console.warn(
+						`✗ Failed to load ${filename} from /${directory}/: ${response.status}`
+					);
 				}
-			}
-		} catch (error) {
-			console.error("Failed to load pages from directory listing:", error);
-
-			// Fallback: try to load known files from both directories
-			const directories = useExampleFallback
-				? ["./example/"]
-				: ["./data/", "./example/"];
-			const knownFiles = [
-				"home.json",
-				"example-list.json",
-				"example-terms.json",
-				"resources.json",
-				"glossary.json",
-			];
-
-			for (const directory of directories) {
-				for (const filename of knownFiles) {
-					try {
-						const pageResponse = await fetch(`${directory}${filename}`);
-						if (pageResponse.ok) {
-							const pageData = await pageResponse.json();
-							this.pages[pageData.id] = pageData;
-						}
-					} catch (error) {
-						// Silently continue - file might not exist in this directory
-					}
-				}
+			} catch (error) {
+				console.warn(`✗ Error loading ${filename}:`, error);
 			}
 		}
-	}
 
-	parseDirectoryListing(html) {
-		// Simple directory listing parser - adjust based on your server
-		const matches = html.match(/href="([^"]*\.json)"/g);
-		if (matches) {
-			return matches.map((match) => match.replace(/href="|"/g, ""));
+		// Check if any pages were loaded
+		if (Object.keys(this.pages).length === 0) {
+			console.error("No pages were loaded");
+			throw new Error(`No valid JSON files found in /${directory}/ directory`);
+		} else {
+			console.log(
+				`✓ Successfully loaded ${
+					Object.keys(this.pages).length
+				} pages from /${directory}/`
+			);
 		}
-		return [];
 	}
 
 	generateMenu() {
