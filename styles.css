@@ -8,7 +8,7 @@
 body {
   /* Font Variables */
   --font-family-primary: Arial, sans-serif;
-  --font-family-header: "Bison", "Bison regular", sans-serif;
+  --font-family-header: "Bison Light", "Bison regular", sans-serif;
   --font-family-code: "fira code", "Courier New", monospace;
   --line-height-base: 1.6;
   /* Font Size Variables */
