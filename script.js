@@ -3,6 +3,7 @@ class HomepageSystem {
 		this.currentPageId = null;
 		this.pages = {};
 		this.defaultPageId = "home"; // You can change this variable to set the default page
+console.log('homepageConfig:', window.homepageConfig);
 		this.init();
 	}
 
